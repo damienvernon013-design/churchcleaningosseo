@@ -537,3 +537,144 @@ details p {
   .footer-inner { grid-template-columns: 1fr; }
   .header-inner { flex-direction: column; align-items: flex-start; }
 }
+
+/* Quote wizard */
+.wiz-progress { margin-bottom: 24px; }
+.wiz-progress-bar {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--accent-light);
+  overflow: hidden;
+}
+.wiz-progress-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+.wiz-progress-label {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.wiz-fieldset { border: none; padding: 0; margin: 0 0 24px; }
+.wiz-legend {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 8px;
+  padding: 0;
+}
+.wiz-hint {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.wiz-options { display: flex; flex-direction: column; gap: 10px; }
+.wiz-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  background: var(--white);
+}
+.wiz-option:hover { border-color: var(--accent); }
+.wiz-option.is-selected {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+.wiz-option-input { flex: 0 0 auto; width: 18px; height: 18px; }
+.wiz-option-label { flex: 1 1 auto; }
+
+.wiz-slot {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.wiz-slot-title {
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.wiz-slot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 560px) {
+  .wiz-slot-grid { grid-template-columns: 1fr; }
+}
+
+.wiz-review-heading {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+.wiz-review-card {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 18px;
+  margin-bottom: 16px;
+  background: var(--white);
+}
+.wiz-review-card h4 {
+  font-family: Arial, sans-serif;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.wiz-review-list { display: grid; grid-template-columns: 1fr 1.4fr; gap: 6px 12px; }
+.wiz-review-list dt {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.wiz-review-list dd {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.wiz-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  margin: 16px 0;
+}
+.wiz-terms input { flex: 0 0 auto; margin-top: 3px; }
+
+.wiz-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+.wiz-nav .btn-primary,
+.wiz-nav .btn-secondary { width: auto; display: inline-block; }
+
+.wiz-done { padding: 8px 0; }
+.wiz-done h2 { color: var(--primary); margin-bottom: 12px; }
+.wiz-done-list {
+  list-style: disc;
+  margin: 16px 0 16px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+.form-status { font-family: Arial, sans-serif; font-size: 0.9rem; min-height: 1.2em; margin: 12px 0; }
+.form-status-error { color: #b3261e; }
+.form-status-success { color: var(--primary); }

@@ -8,6 +8,7 @@
 <link rel="canonical" href="https://churchcleaningosseo.com/request-a-quote/">
 <link rel="stylesheet" href="/styles.css">
 <script src="/quote-form.js" defer></script>
+<script src="/assets/js/quote-wizard.js" defer></script>
 <meta property="og:title" content="Free Quote | Church Cleaning Osseo, MN">
 <meta property="og:description" content="Request a free church cleaning quote for Osseo, MN. We respond by next business day with a call to schedule a walkthrough. Call (866) 958-8773.">
 <meta property="og:type" content="website">
@@ -34,6 +35,7 @@
     <a href="/our-process/">Our Process</a>
     <a href="/about/">About</a>
     <a href="/faq/">FAQ</a>
+    <a href="/blog/">Blog</a>
     <a href="/request-a-quote/">Request a Quote</a>
   </div>
 </nav>
@@ -45,53 +47,16 @@
   </div>
   <p>We do not quote over the phone without seeing the building. A scope walkthrough typically takes 30 to 45 minutes. We bring a checklist, document the spaces, note any access logistics, and return a written proposal within two business days of the visit.</p>
   <p>There is no obligation attached to the walkthrough. If the proposal does not fit your budget or schedule, you are under no pressure to proceed.</p>
-  <div style="background:var(--white);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:4px;padding:32px 28px;max-width:580px;margin:32px 0;">
+  <div style="background:var(--white);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:4px;padding:32px 28px;max-width:640px;margin:32px 0;">
     <h2 style="margin-top:0;">Quote request form</h2>
-    <form class="quote-form" action="/request-a-quote/" method="post" data-submit-mode="api">
-      <input type="hidden" name="utm_source" value="">
-      <label for="fname">Your name *</label>
-      <input type="text" id="fname" name="name" required placeholder="Name">
-
-      <label for="ftitle">Your role at the church</label>
-      <input type="text" id="ftitle" name="title" placeholder="Administrator, facilities chair, pastor, etc.">
-
-      <label for="ffacility">Church or ministry name *</label>
-      <input type="text" id="ffacility" name="facility" required placeholder="Church name">
-
-      <label for="fcity">City *</label>
-      <input type="text" id="fcity" name="city" required placeholder="Osseo, Maple Grove, Brooklyn Park, etc.">
-
-      <label for="fzip">ZIP code</label>
-      <input type="text" id="fzip" name="zip" placeholder="55369" pattern="\d{5}" maxlength="5" inputmode="numeric">
-
-      <label for="fservice">Primary service needed</label>
-      <select id="fservice" name="service">
-        <option value="">Select one</option>
-        <option>Sanctuary &amp; Worship Space Cleaning</option>
-        <option>Fellowship Hall &amp; Kitchen Cleaning</option>
-        <option>Nursery &amp; Classroom Sanitizing</option>
-        <option>Full facility cleaning</option>
-        <option>Not sure &mdash; want guidance</option>
-      </select>
-
-      <label for="fsize">Approximate facility size</label>
-      <select id="fsize" name="size">
-        <option value="">Select one</option>
-        <option>Under 2,000 sq ft</option>
-        <option>2,000&ndash;5,000 sq ft</option>
-        <option>5,000&ndash;10,000 sq ft</option>
-        <option>Over 10,000 sq ft</option>
-        <option>Not sure</option>
-      </select>
-
-      <label for="fphone">Best phone number *</label>
-      <input type="tel" id="fphone" name="phone" required placeholder="(763) 555-0100">
-
-      <label for="fnotes">Anything we should know before the walkthrough?</label>
-      <textarea id="fnotes" name="notes" placeholder="Access hours, key holder, specific concerns..."></textarea>
-
-      <button type="submit" class="btn-primary">Send my quote request</button>
-      <p class="callback-note">We respond by next business day, Mon&ndash;Fri 8:30am&ndash;5:00pm.</p>
+    <form data-quote-wizard novalidate>
+      <div data-wizard-progress class="wiz-progress"></div>
+      <div data-wizard-steps></div>
+      <p data-wizard-status class="form-status" role="status" aria-live="polite"></p>
+      <div data-wizard-nav class="wiz-nav">
+        <button type="button" data-wizard-back class="btn-secondary" hidden>Back</button>
+        <button type="button" data-wizard-next class="btn-primary">Next</button>
+      </div>
     </form>
   </div>
   <h2>Or call us directly</h2>
@@ -133,6 +98,8 @@
   <div class="footer-bottom">
     <span>&copy; 2024 Osseo Church Cleaning &bull; Osseo, MN</span>
     <span>22 years in faith facility cleaning &bull; Insured &amp; bonded</span>
+    <span class="site-credit">Built and Maintained by <a href="https://infin8content.com/" style="color:rgba(255,255,255,0.7);">Infin8Content</a></span>
+
   </div>
 </footer>
 </body>
